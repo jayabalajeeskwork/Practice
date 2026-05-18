@@ -2,86 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-        <style>
-        /* div {
-            color: blue;
-            background-color: cadetblue;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tags Example</title>
 
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, sans-serif;
+
+            /* Background Image */
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container{
+            width: 80%;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
             text-align: center;
-
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
-
-            border: 5px solid orangered;
-            border-radius: 0% 30% 0% 30%;
+            color: darkblue;
         }
 
-        span 
-        {
-            color: black;
-        } */
-
-        #first
-        {
-            color: blue;
-            background-color: cadetblue;
-
-            text-align: center;
-
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
-
-            border: 5px solid orangered;
-            border-radius: 0% 30% 0% 30%;
-        }
-        #second
-        {
-            color: blue;
-            background-color: blanchedalmond;
-
-            text-align: center;
-
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
-
-            border: 5px solid orangered;
-            border-radius: 0% 30% 0% 30%;
+        /* Link Style */
+        a{
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: blue;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
-        .change
-        {
-            color: black;
+        a:hover{
+            background: darkblue;
         }
 
+        /* Image Style */
+        img{
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px gray;
+            object-fit: cover;
+        }
 
+        /* Video Style */
+        video{
+            width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 8px gray;
+        }
+
+        /* Audio Style */
+        audio{
+            width: 400px;
+            margin-top: 15px;
+        }
+
+        /* Iframe Style */
+        iframe{
+            width: 500px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 8px gray;
+        }
 
     </style>
 </head>
+
 <body>
-    <ol style="list-style-type: lower-roman;">
-        <li>Java</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-    </ol>
-    <ul style="list-style-type: square;">
-        <li>VS Code</li>
-        <li>GitHub</li>
-        <li>Postman</li>
-    </ul>
+
+    <div class="container">
+
+        <h1>HTML Media Tags Example</h1>
+
+        <!-- Link Tag -->
+        <h2>Link Tag</h2>
+
+        <a href="https://google.com" target="_blank">
+            Visit Google
+        </a>
 
 
-      <div id = "first">
-        <p>Friendship is a beautiful relationship between people who care for and support each other. <span  class="change">True friends
-                help us during difficult times and share our happiness during good moments.</span> A good friendship is
-            built on trust, understanding, and respect.</p>
+        <!-- Image Tag -->
+        <h2>Image Tag</h2>
+
+        <img src="image.jpg" alt="Sample Image">
+
+
+        <!-- Video Tag -->
+        <h2>Video Tag</h2>
+
+        <video controls autoplay muted>
+            <source src="movie.mp4" type="video/mp4" alt="error">
+        </video>
+
+
+        <!-- Audio Tag -->
+        <h2>Audio Tag</h2>
+
+        <audio controls>
+            <source src="song.mp3" type="audio/mp3">
+        </audio>
+
+
+        <!-- Iframe Tag -->
+        <h2>Iframe Tag</h2>
+
+        <iframe
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            allowfullscreen>
+        </iframe>
+
     </div>
-<br>
-    <div id ="second">
-        <p>Friendship is a beautiful relationship between people who care for and support each other. <span class="change">True friends
-                help us during difficult times and share our happiness during good moments.</span> A good friendship is
-            built on trust, understanding, and respect.</p>
-    </div>
+
 </body>
 </html>

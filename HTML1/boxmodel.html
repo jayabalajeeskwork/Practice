@@ -1,0 +1,78 @@
+ <!-- -------------------------------------------------
+|                    MARGIN                       |
+|   -----------------------------------------     |
+|  |                 BORDER                  |    |
+|  |   ----------------------------------    |    |
+|  |  |            PADDING              |    |    |
+|  |  |   --------------------------    |    |    |
+|  |  |  |        CONTENT         |    |    |    |
+|  |  |   --------------------------    |    |    |
+|  |   ----------------------------------    |    |
+|   -----------------------------------------     |
+
+ -------------------------------------------------
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model Example</title>
+
+    <style>
+
+        .box{
+
+     
+            width: 200px;
+            height: auto;
+
+            background-color: lightblue;
+
+            padding: 20px;
+
+  
+            border: 5px solid black;
+
+  
+            margin: 40px;
+
+            font-size: 20px;
+        }
+
+
+        #withoutdiv
+        {
+            border: 4px black solid;
+            border-radius: 0% 30% 0% 30%;
+            background-color: aquamarine;
+            padding: 30px;
+        }
+        #withdiv p
+        {
+            border: 4px black solid;
+            border-radius: 30% 30% 30% 30%;
+            background-color: aquamarine;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p id="withoutdiv">Friendship is a beautiful relationship between people who care for and support each other. True friends help us
+        during difficult times and share our happiness during good moments. A good friendship is built on trust,
+        understanding, and respect.</p>
+
+<div id="withdiv">
+    <p>Friendship is a beautiful relationship between people who care for and support each other. True friends help us
+        during difficult times and share our happiness during good moments. A good friendship is built on trust,
+        understanding, and respect.</p>
+</div>
+    <div class="box">
+        Friendship is a beautiful relationship between people who care for and support each other. True friends help us
+        during difficult times and share our happiness during good moments. A good friendship is built on trust,
+        understanding, and respect.
+    </div>
+
+</body>
+</html>

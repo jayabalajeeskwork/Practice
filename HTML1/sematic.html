@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Tags Example</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header{
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        main{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section{
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        article{
+            background-color: lightblue;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        aside{
+            flex: 1;
+            background-color: lightgray;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        figure{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        figure img{
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        figcaption{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        footer{
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>My Semantic Website</h1>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- SECTION -->
+        <section>
+
+            <h2>Latest Articles</h2>
+
+            <!-- ARTICLE -->
+            <article>
+
+                <h3>HTML Semantic Tags</h3>
+
+                <p>
+                    Semantic tags clearly describe the meaning of content in HTML.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE -->
+            <article>
+
+                <h3>Why Use Semantic Tags?</h3>
+
+                <p>
+                    They improve SEO, readability, and accessibility.
+                </p>
+
+            </article>
+
+
+            <!-- FIGURE -->
+            <figure>
+
+                <img src="image.jpg" alt="Nature Image">
+
+                <!-- FIGCAPTION -->
+                <figcaption>
+                    Beautiful Nature Image
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- ASIDE -->
+        <aside>
+
+            <h3>Sidebar</h3>
+
+            <p>
+                This is sidebar content using aside tag.
+            </p>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Copyright © 2026 My Website
+        </p>
+
+    </footer>
+
+</body>
+</html>
