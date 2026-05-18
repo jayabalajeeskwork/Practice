@@ -1,6 +1,5 @@
 package com.jb.sms_project_backend.sms;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -97,5 +96,4 @@ public class Student {
         this.attendance = attendance;
     }
 
-    
 }
