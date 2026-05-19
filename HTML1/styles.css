@@ -1,0 +1,100 @@
+        
+        /* margin
+        padding
+        font-family
+        background-image: url
+        background-position
+        background-size
+        border-radius
+        box-shadow: vertical horizontal blur color
+        a:hover
+        transition
+        background:
+        text-decoration
+        object-fit */
+
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, sans-serif;
+
+            /* Background Image */
+            background-image: url('./media/images/bg.png');
+            background-position: center;
+
+            background-size: cover;
+        }
+
+        .container{
+            width: 80%;
+            margin: 30px auto;
+    
+            background: grey 90%;
+            background-image: url("media/images/container.png");
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+
+        }
+        
+
+        h1{
+            text-align: center;
+            color: darkblue;
+            transition: 1s;
+        }
+
+        /* Link Style */
+        a{
+            display: inline-block;
+            margin-top: 10px;
+        
+            background: blue;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        a:hover{
+            background: darkblue;
+            
+        }
+        h1:hover
+        {
+            color: red;
+            text-decoration: underline;
+
+        }
+        /* Image Style */
+        img{
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px gray;
+            object-fit: cover;
+        }
+
+        /* Video Style */
+        video{
+            width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 8px gray;
+        }
+
+        /* Audio Style */
+        audio{
+            width: 400px;
+            margin-top: 15px;
+        }
+
+        /* Iframe Style */
+        iframe{
+            width: 500px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 8px gray;
+        }

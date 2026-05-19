@@ -1,88 +1,23 @@
+<!--
+link rel hre 
+href
+target
+src
+alt 
+source 
+img 
+audio 
+controls
+type
+alt
+allowfullscreen -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Tags Example</title>
-
-    <style>
-
-        body{
-            margin:0;
-            padding:0;
-            font-family: Arial, sans-serif;
-
-            /* Background Image */
-            background-image: url('bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .container{
-            width: 80%;
-            margin: 30px auto;
-            background: rgba(255,255,255,0.9);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 10px gray;
-        }
-
-        h1{
-            text-align: center;
-            color: darkblue;
-        }
-
-        /* Link Style */
-        a{
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            background: blue;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        a:hover{
-            background: darkblue;
-        }
-
-        /* Image Style */
-        img{
-            width: 300px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 8px gray;
-            object-fit: cover;
-        }
-
-        /* Video Style */
-        video{
-            width: 400px;
-            border-radius: 10px;
-            margin-top: 15px;
-            box-shadow: 0px 0px 8px gray;
-        }
-
-        /* Audio Style */
-        audio{
-            width: 400px;
-            margin-top: 15px;
-        }
-
-        /* Iframe Style */
-        iframe{
-            width: 500px;
-            height: 300px;
-            border: none;
-            border-radius: 10px;
-            margin-top: 15px;
-            box-shadow: 0px 0px 8px gray;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -91,45 +26,30 @@
 
         <h1>HTML Media Tags Example</h1>
 
-        <!-- Link Tag -->
         <h2>Link Tag</h2>
-
-        <a href="https://google.com" target="_blank">
-            Visit Google
-        </a>
+        <a href="https://google.com" target="_blank">Visit Google</a>
 
 
-        <!-- Image Tag -->
         <h2>Image Tag</h2>
+        <img src="./media/images/batman.png" alt="Batman Image">
 
-        <img src="image.jpg" alt="Sample Image">
 
-
-        <!-- Video Tag -->
         <h2>Video Tag</h2>
-
         <video controls autoplay muted>
-            <source src="movie.mp4" type="video/mp4" alt="error">
+            <source src="./media/thalapathy.mp4" type="video/mp4" alt="error">
         </video>
 
 
-        <!-- Audio Tag -->
         <h2>Audio Tag</h2>
-
         <audio controls>
-            <source src="song.mp3" type="audio/mp3">
+            <source src="./media/Theekkoluthi.mp3" type="audio/mp3">
         </audio>
 
-
-        <!-- Iframe Tag -->
         <h2>Iframe Tag</h2>
-
-        <iframe
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            allowfullscreen>
-        </iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/07rwVa8Hb84?si=12dVUGidcTZ5Uk6H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     </div>
 
 </body>
 </html>
+
