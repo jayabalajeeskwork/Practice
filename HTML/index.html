@@ -1,61 +1,144 @@
-<!--
-link rel href 
-href
-target
-src
-alt 
-source 
-img 
-audio
-video 
-controls
-type
-alt
-autoplaymuted
-allowfullscreen -->
+<!-- 
+form - id onsubmit method
+label - for
+input - type id name placeholder required minlength max accept value
+select
+option - value
+fieldset
+legend 
+textarea 
+button 
+
+input type:
+text
+email 
+password 
+number 
+date 
+file 
+radio 
+checkbox 
+hidden 
+submit
+reset
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Styled Form</title>
+
+<link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
 
-    <div id="box">
-        <h1>HTML Media Tags</h1>
-        <h3>Link Tag</h3>
-        <a href="https://jayabalajeesk-portfolio-flax-xi.vercel.app/" target="_blank">Visit Portfolio</a>
+    <div class="form-container">
 
-        <h3>Image tag</h3>
-        <img src="./media/images/batman.png" alt="batman logo">
+        <h2>Registration Form</h2>
 
-        <h3>Video Tag</h3>
-        <video autoplay muted controls>
-            <source src="./media/thalapathy.mp4" type="video/mp4" alt="error">
-        </video>
+        <form id="myform" onsubmit="msg(); return false;" method="POST">
 
-        <h3>Audio Tag</h3>
-        <audio controls>
-            <source src="./media/Theekkoluthi.mp3" type="audio/mp3" alt="error">
-        </audio>
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required minlength="3" maxlength="50">
+            </div>
 
-        <h3>Iframe Tag</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ovczHJiTHSY?si=fIUOBYXXi-eh--em"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
+            </div>
+
+            <!-- Number -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="60">
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Choose Course --</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="react">React</option>
+                </select>
+            </div>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Gender</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male </label>
+                    <label><input type="radio" name="gender" value="female"> Female </label>
+                </div>
+            </fieldset>
+
+            <!-- Checkboxes -->
+            <fieldset>
+                <legend>Skills</legend>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="skills" value="html">HTML</label>
+                    <label><input type="checkbox" name="skills" value="css">CSS</label>
+                    <label><input type="checkbox" name="skills" value="js"> JavaScript </label>
+                </div>
+            </fieldset>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="about">About You</label>
+                <textarea id="about" name="about" rows="4" placeholder="Write something..."></textarea>
+            </div>
+
+            <input type="hidden" name="userId" value="101">
 
 
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
 
-        <i class="fa-solid fa-house"></i>
+            <div class="form-group">
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+
     </div>
+<script>
+    function msg()
+    {
+        alert("Submitted")
+        document.getElementById("myform").reset();
+    }
+</script>
 </body>
 
 </html>
