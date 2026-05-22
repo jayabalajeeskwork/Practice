@@ -28,99 +28,36 @@ reset
 
 <head>
 
-<!-- <link rel="stylesheet" href="./styles.css"> -->
 </head>
 
 <body>
-    <h1>Registration Form</h1>
+    <h1> Login</h1>
     <form id="myform" onsubmit="msg(); return false;" method="post">
-        <label for="fullname">Name</label>
-        <input type="text" id="fullname" name="fullname">
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" required>
         <br>
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" required>
         <br>
-
-        <button type="submit">Submit</button>
-        <button type="Reset">Reset</button>
+        <button type=" submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
+    <script>
+        function msg() {
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            if (username === "jaya" && password === "jaya") {
 
-<script>
-    function msg()
-    {
-        alert("Sucess")
-        document.getElementById("myform").reset();
-    }
-</script>
-</body>
+                alert("Login Sucess")
+                window.location.href = "sucess.html"
 
-</html>
-<!-- 
-form - id onsubmit method
-label - for
-input - type id name placeholder required minlength max accept value
-select
-option - value
-fieldset
-legend 
-textarea 
-button 
-
-input type:
-text
-email 
-password 
-number 
-date 
-file 
-radio 
-checkbox 
-hidden 
-submit
-reset
--->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<!-- <link rel="stylesheet" href="./styles.css"> -->
-</head>
-
-<body>
-    <h1>Registration Form</h1>
-    <form id="myform" onsubmit="msg(); return false;" method="post">
-        <label for="fullname">Name</label>
-        <input type="text" id="fullname" name="fullname">
-        <br>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password">
-        <br>
-
-        <button type="submit">Submit</button>
-        <button type="Reset">Reset</button>
-    </form>
-
-<script>
-    function msg()
-    {
-
-        let username = document.getElementById("fullname").value
-        let password = document.getElementById("password").value
-        if(username==="jaya" && password==="jaya")
-        {
-            alert("Sucess")
-            document.getElementById("myform").reset();
-            window.location.href= "sucess.html"
+            }
+            else {
+                alert("Invalid Creditials")
+                document.getElementById("myform").reset();
+            }
         }
-        else
-        {
-            alert(username +"Correct username password kudra")
-        }
-    }
-</script>
+    </script>
 </body>
 
 </html>

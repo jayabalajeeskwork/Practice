@@ -1,6 +1,5 @@
 package com.jb.sms_project_backend.sms;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +32,7 @@ public class StudentController {
 
         Student student = service.getStudentById(id);
 
-        if(student != null) {
+        if (student != null) {
             return ResponseEntity.ok(student);
         }
 
@@ -49,7 +48,7 @@ public class StudentController {
 
         Student updatedStudent = service.updateStudent(id, student);
 
-        if(updatedStudent != null) {
+        if (updatedStudent != null) {
             return ResponseEntity.ok(updatedStudent);
         }
 
@@ -65,7 +64,7 @@ public class StudentController {
 
         Student updatedStudent = service.patchStudent(id, student);
 
-        if(updatedStudent != null) {
+        if (updatedStudent != null) {
             return ResponseEntity.ok(updatedStudent);
         }
 
@@ -79,5 +78,4 @@ public class StudentController {
 
         return ResponseEntity.ok(service.deleteStudent(id));
     }
-
 }
