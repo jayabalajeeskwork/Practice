@@ -1,144 +1,420 @@
-<!-- 
-form - id onsubmit method
-label - for
-input - type id name placeholder required minlength max accept value
-select
-option - value
-fieldset
-legend 
-textarea 
-button 
-
-input type:
-text
-email 
-password 
-number 
-date 
-file 
-radio 
-checkbox 
-hidden 
-submit
-reset
--->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Styled Form</title>
-
-<!-- <link rel="stylesheet" href="./styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Full Basics</title>
 </head>
 
 <body>
 
-    <div class="form-container">
+  <h1>Open Console</h1>
 
-        <h2>Registration Form</h2>
+  <script>
 
-        <form id="myform" onsubmit="msg(); return false;" method="POST">
+    // =====================================
+    // VARIABLES
+    // =====================================
 
-            <!-- Text Input -->
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required minlength="3" maxlength="50">
-            </div>
+    var name = "Jaya";
+    let age = 22;
+    const country = "India";
 
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter email" required>
-            </div>
-
-            <!-- Password -->
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
-            </div>
-
-            <!-- Number -->
-            <div class="form-group">
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age" min="18" max="60">
-            </div>
-
-            <!-- Date -->
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob">
-            </div>
-
-            <!-- File Upload -->
-            <div class="form-group">
-                <label for="resume">Upload Resume</label>
-                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
-            </div>
-
-            <!-- Select Dropdown -->
-            <div class="form-group">
-                <label for="course">Select Course</label>
-                <select id="course" name="course" required>
-                    <option value="">-- Choose Course --</option>
-                    <option value="java">Java</option>
-                    <option value="python">Python</option>
-                    <option value="react">React</option>
-                </select>
-            </div>
-
-            <!-- Radio Buttons -->
-            <fieldset>
-                <legend>Gender</legend>
-                <div class="radio-group">
-                    <label><input type="radio" name="gender" value="male" required> Male </label>
-                    <label><input type="radio" name="gender" value="female"> Female </label>
-                </div>
-            </fieldset>
-
-            <!-- Checkboxes -->
-            <fieldset>
-                <legend>Skills</legend>
-
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="skills" value="html">HTML</label>
-                    <label><input type="checkbox" name="skills" value="css">CSS</label>
-                    <label><input type="checkbox" name="skills" value="js"> JavaScript </label>
-                </div>
-            </fieldset>
-
-            <!-- Textarea -->
-            <div class="form-group">
-                <label for="about">About You</label>
-                <textarea id="about" name="about" rows="4" placeholder="Write something..."></textarea>
-            </div>
-
-            <input type="hidden" name="userId" value="101">
+    console.log(name);
+    console.log(age);
+    console.log(country);
 
 
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
+    // =====================================
+    // DATA TYPES
+    // =====================================
 
-            <div class="form-group">
-                <button type="reset">Reset</button>
-            </div>
+    let stringType = "Hello";
+    let numberType = 100;
+    let booleanType = true;
+    let arrayType = [10,20,30];
+    let objectType = {
+      city: "Salem"
+    };
+    let undefinedType;
+    let nullType = null;
 
-        </form>
+    console.log(typeof stringType);
+    console.log(typeof numberType);
+    console.log(typeof booleanType);
+    console.log(typeof arrayType);
+    console.log(typeof objectType);
+    console.log(typeof undefinedType);
+    console.log(typeof nullType);
 
-    </div>
-<script>
-    function msg()
+
+    // =====================================
+    // TEMPLATE LITERALS
+    // =====================================
+
+    let user = "Jaya";
+
+    console.log(`Welcome ${user}`);
+
+
+    // =====================================
+    // TYPE CONVERSION
+    // =====================================
+
+    let num = "100";
+
+    console.log(Number(num));
+    console.log(String(500));
+    console.log(Boolean(1));
+
+
+    // =====================================
+    // IF ELSE IF ELSE
+    // =====================================
+
+    let marks = 75;
+
+    if(marks >= 90)
     {
-        alert("Submitted")
-        document.getElementById("myform").reset();
+      console.log("Grade A");
     }
-</script>
-</body>
+    else if(marks >= 60)
+    {
+      console.log("Grade B");
+    }
+    else
+    {
+      console.log("Fail");
+    }
 
+
+    // =====================================
+    // TERNARY OPERATOR
+    // =====================================
+
+    let result = age >= 18 ? "Adult" : "Minor";
+
+    console.log(result);
+
+
+    // =====================================
+    // SWITCH
+    // =====================================
+
+    let day = 2;
+
+    switch(day)
+    {
+      case 1:
+        console.log("Monday");
+        break;
+
+      case 2:
+        console.log("Tuesday");
+        break;
+
+      case 3:
+        console.log("Wednesday");
+        break;
+
+      default:
+        console.log("Invalid Day");
+    }
+
+
+    // =====================================
+    // FOR LOOP
+    // =====================================
+
+    for(let i = 1; i <= 5; i++)
+    {
+      console.log("For Loop =", i);
+    }
+
+
+    // =====================================
+    // WHILE LOOP
+    // =====================================
+
+    let a = 1;
+
+    while(a <= 5)
+    {
+      console.log("While Loop =", a);
+
+      a++;
+    }
+
+
+    // =====================================
+    // DO WHILE LOOP
+    // =====================================
+
+    let b = 1;
+
+    do
+    {
+      console.log("Do While =", b);
+
+      b++;
+    }
+    while(b <= 5);
+
+
+    // =====================================
+    // FOR OF LOOP
+    // =====================================
+
+    let colors = ["Red","Green","Blue"];
+
+    for(let color of colors)
+    {
+      console.log(color);
+    }
+
+
+    // =====================================
+    // FOR IN LOOP
+    // =====================================
+
+    let person = {
+      name: "Jaya",
+      city: "Salem"
+    };
+
+    for(let key in person)
+    {
+      console.log(key, person[key]);
+    }
+
+
+    // =====================================
+    // JUMP STATEMENTS
+    // break and continue
+    // =====================================
+
+    for(let i = 1; i <= 10; i++)
+    {
+
+      if(i == 3)
+      {
+        continue;
+      }
+
+      if(i == 8)
+      {
+        break;
+      }
+
+      console.log(i);
+    }
+
+
+    // =====================================
+    // == and ===
+    // =====================================
+
+    let x = 10;
+    let y = "10";
+
+    console.log(x == y);
+
+    console.log(x === y);
+
+
+    // =====================================
+    // OPERATORS
+    // =====================================
+
+    let n1 = 10;
+    let n2 = 5;
+
+    // Arithmetic
+    console.log(n1 + n2);
+    console.log(n1 - n2);
+    console.log(n1 * n2);
+    console.log(n1 / n2);
+    console.log(n1 % n2);
+
+    // Comparison
+    console.log(n1 > n2);
+    console.log(n1 < n2);
+    console.log(n1 >= n2);
+    console.log(n1 <= n2);
+
+    // Logical
+    console.log(true && true);
+    console.log(true || false);
+    console.log(!true);
+
+    // Assignment
+    let z = 10;
+
+    z += 5;
+
+    console.log(z);
+
+
+    // =====================================
+    // FUNCTIONS
+    // =====================================
+
+    function greet()
+    {
+      console.log("Welcome");
+    }
+
+    greet();
+
+
+    // =====================================
+    // FUNCTION WITH PARAMETER
+    // =====================================
+
+    function add(a,b)
+    {
+      console.log(a + b);
+    }
+
+    add(10,20);
+
+
+    // =====================================
+    // ARROW FUNCTION
+    // =====================================
+
+    const hello = () =>
+    {
+      console.log("Arrow Function");
+    }
+
+    hello();
+
+
+    // =====================================
+    // ARRAY
+    // =====================================
+
+    let fruits = ["Apple", "Orange", "Mango"];
+
+    console.log(fruits[0]);
+
+    fruits.push("Banana");
+
+    fruits.pop();
+
+    console.log(fruits);
+
+    console.log(fruits.length);
+
+
+    // =====================================
+    // ARRAY METHODS
+    // =====================================
+
+    let numbers = [1,2,3,4,5];
+
+    numbers.map((num) =>
+    {
+      console.log(num * 2);
+    });
+
+    numbers.filter((num) =>
+    {
+      console.log(num > 2);
+    });
+
+
+    // =====================================
+    // OBJECT
+    // =====================================
+
+    let student = {
+      name: "Jaya",
+      age: 22
+    };
+
+    console.log(student.name);
+    console.log(student.age);
+
+
+    // =====================================
+    // STRING METHODS
+    // =====================================
+
+    let message = "JavaScript";
+
+    console.log(message.toUpperCase());
+    console.log(message.toLowerCase());
+    console.log(message.includes("Script"));
+
+
+    // =====================================
+    // MATH METHODS
+    // =====================================
+
+    console.log(Math.random());
+    console.log(Math.floor(5.9));
+    console.log(Math.ceil(5.1));
+    console.log(Math.round(5.5));
+
+
+    // =====================================
+    // DATE
+    // =====================================
+
+    let today = new Date();
+
+    console.log(today);
+
+
+    // =====================================
+    // EVENTS
+    // =====================================
+
+    document.addEventListener("click", function()
+    {
+      console.log("Page Clicked");
+    });
+
+
+    // =====================================
+    // DOM
+    // =====================================
+
+    document.querySelector("h1").style.color = "red";
+
+
+    // =====================================
+    // SET TIMEOUT
+    // =====================================
+
+    setTimeout(() =>
+    {
+      console.log("Runs After 2 Seconds");
+    }, 2000);
+
+
+    // =====================================
+    // SET INTERVAL
+    // =====================================
+
+    let count = 0;
+
+    let interval = setInterval(() =>
+    {
+      count++;
+
+      console.log(count);
+
+      if(count == 5)
+      {
+        clearInterval(interval);
+      }
+
+    }, 1000);
+
+  </script>
+
+</body>
 </html>

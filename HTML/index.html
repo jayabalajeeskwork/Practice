@@ -23,44 +23,121 @@ submit
 reset
 -->
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Styled Form</title>
+
+<link rel="stylesheet" href="./styles.css">
 </head>
-
-
 
 <body>
 
-    <form id="myform" onsubmit="msg(); return false;" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username">
-        <BR>
-        <label for="password">Password</label>
-        <input type="password" id="password">
-        <br>
-        <button type="submit">Login</button>
-        <button type="reset">Clear</button>
+    <div class="form-container">
 
-    </form>
+        <h2>Registration Form</h2>
 
-    <script>
-        function msg() {
-            let username = document.getElementById("username").value
-            let password = document.getElementById("password").value
-            if (username === "jaya" && password === "jaya") {
-                console.log("Success")
-                alert("Login Success")
-                window.location.href = "sucess.html"
-            }
-            else {
-                alert("Invalid Creditials")
-                document.getElementById("myform").reset()
-            }
-        }
-    </script>
+        <form id="myform" onsubmit="msg(); return false;" method="POST">
+
+       
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required minlength="3" maxlength="50">
+            </div>
+
+  
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+
+      
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
+            </div>
+
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="60">
+            </div>
+
+       
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+  
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Choose Course --</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="react">React</option>
+                </select>
+            </div>
+
+     
+            <fieldset>
+                <legend>Gender</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male </label>
+                    <label><input type="radio" name="gender" value="female"> Female </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="skills" value="html">HTML</label>
+                    <label><input type="checkbox" name="skills" value="css">CSS</label>
+                    <label><input type="checkbox" name="skills" value="js"> JavaScript </label>
+                </div>
+            </fieldset>
+
+
+            <div class="form-group">
+                <label for="about">About You</label>
+                <textarea id="about" name="about" rows="4" placeholder="Write something..."></textarea>
+            </div>
+
+            <input type="hidden" name="userId" value="101">
+
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+
+            <div class="form-group">
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+
+    </div>
+<script>
+    function msg()
+    {
+        alert("Submitted")
+        document.getElementById("myform").reset();
+    }
+</script>
 </body>
 
 </html>
