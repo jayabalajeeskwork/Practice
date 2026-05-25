@@ -30,31 +30,34 @@ reset
 
 </head>
 
+
+
 <body>
-    <h1> Login</h1>
+
     <form id="myform" onsubmit="msg(); return false;" method="post">
-        <label for="username">username</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username">Username</label>
+        <input type="text" id="username">
+        <BR>
+        <label for="password">Password</label>
+        <input type="password" id="password">
         <br>
-        <label for="password">password</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type=" submit">Submit</button>
-        <button type="reset">Reset</button>
+        <button type="submit">Login</button>
+        <button type="reset">Clear</button>
+
     </form>
+
     <script>
         function msg() {
             let username = document.getElementById("username").value
             let password = document.getElementById("password").value
             if (username === "jaya" && password === "jaya") {
-
-                alert("Login Sucess")
+                console.log("Success")
+                alert("Login Success")
                 window.location.href = "sucess.html"
-
             }
             else {
                 alert("Invalid Creditials")
-                document.getElementById("myform").reset();
+                document.getElementById("myform").reset()
             }
         }
     </script>
