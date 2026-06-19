@@ -1,13 +1,12 @@
 package com.jb.simple_pro;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class UserController {
+public class UserController {Z
 
     @Autowired
     private UserRepository repo;
@@ -36,16 +35,13 @@ public class UserController {
             @RequestParam String password,
             Model model) {
 
-        User user =
-                repo.findByEmailAndPassword(
-                        email,
-                        password);
+        User user = repo.findByEmailAndPassword(
+                email,
+                password);
 
-        if(user != null) {
+        if (user != null) {
 
-            model.addAttribute(
-                    "username",
-                    user.getUsername());
+            model.addAttribute("username", user.getUsername());
 
             return "dashboard";
         }
