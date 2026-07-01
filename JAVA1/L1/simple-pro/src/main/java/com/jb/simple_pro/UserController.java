@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class UserController {Z
+public class UserController {
 
     @Autowired
     private UserRepository repo;
