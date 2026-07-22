@@ -14,6 +14,7 @@ public class AuthService {
     @Autowired
     private UserRepository userRepo;
 
+    @Autowired
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     public String register(User user) {
