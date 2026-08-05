@@ -25,3 +25,23 @@ console.log(10 === 10) // true
 console.log("10" === 10) // false
 console.log(10 !== 10) // false
 console.log("10" !== 10) //true
+
+
+// true
+// Not Eligible
+// 10
+// 12
+// 12
+// 10
+// 10
+// 22
+
+// true
+// true
+// false
+// false
+
+// true
+// false
+// false
+// true
