@@ -30,7 +30,7 @@ export default function Dashboard() {
         <i className={darkMode ? "bi bi-sun-fill" : "bi bi-moon-fill"}></i>
       </button>
 
-     
+
       <button
         className="btn btn-warning me-2"
         onClick={() => setShowNotification(true)}
@@ -38,7 +38,7 @@ export default function Dashboard() {
         <i className="bi bi-bell-fill"></i>
       </button>
 
-   
+
       <button
         className={`btn me-2 ${liked ? "btn-danger" : "btn-outline-danger"}`}
         onClick={() => setLiked(!liked)}
