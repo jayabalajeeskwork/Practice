@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+JB_TEST_RAZORPAY_KEY_ID="rzp_test_TXT5MaFP0giKmO"
+JB_TEST_RAZORPAY_KEY_SECRET="v4xPPMLJAGoZa495MkuDKtT9"
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "payments"
 ]
 
 MIDDLEWARE = [

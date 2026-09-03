@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pay Rs.500</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+    <h2>Pay Rs.500</h2>
+    <button onclick="pay()">Pay Now</button>
+
+    <script>
+        function pay() {
+            fetch("{% url 'create_order' %}", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}"
+                }
+            })
+            .then(response => response.json())
+            .then(order => {
+                new Razorpay({
+                    key: order.key,
+                    amount: order.amount,
+                    currency: "INR",
+                    name: "JB Test Project",
+                    order_id: order.order_id,
+
+                    handler: function (payment) {
+                        let form = new FormData();
+
+                        form.append(
+                            "razorpay_payment_id",
+                            payment.razorpay_payment_id
+                        );
+
+                        form.append(
+                            "razorpay_signature",
+                            payment.razorpay_signature
+                        );
+
+                        fetch("{% url 'payment_success' %}", {
+                            method: "POST",
+                            headers: {
+                                "X-CSRFToken": "{{ csrf_token }}"
+                            },
+                            body: form
+                        })
+                        .then(response => response.json())
+                        .then(data => alert(data.message));
+                    }
+                }).open();
+            });
+        }
+    </script>
+
+</body>
+</html>
