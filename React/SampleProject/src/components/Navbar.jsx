@@ -1,47 +1,29 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const links = ["Home", "About", "Services", "Contact"];
+  const [show, setShow] = useState(false);
 
   return (
     <nav className="navbar">
-      <a href="/" className="logo">
-        JAYABALAJEE<span> . </span>S <span>. </span>K
-      </a>
+      <h2 className="logo">MyWebsite</h2>
 
-      <button
-        className="menu-btn"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle navigation"
-        aria-expanded={isOpen}
-      >
-        {isOpen ? (
-          <i className="bi bi-x-lg"></i>
-        ) : (
-          <i className="bi bi-list"></i>
-        )}
+      <button className="menu-btn" onClick={() => setShow(!show)}>
+        {show ? "✕" : "☰"}
       </button>
 
-      <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-        {links.map((link) => (
-          <li key={link}>
-            <a href={`/${link.toLowerCase()}`} onClick={() => setIsOpen(false)}>
-              {link}
-            </a>
-          </li>
-        ))}
+      <ul className={show ? "nav-links active" : "nav-links"}>
+        <li>
+          <Link to="/" onClick={() => setShow(false)}>
+            Home
+          </Link>
+        </li>
 
         <li>
-          <a
-            href="#get-started"
-            className="nav-cta"
-            onClick={() => setIsOpen(false)}
-          >
-            Get Started
-          </a>
+          <Link to="/about" onClick={() => setShow(false)}>
+            About
+          </Link>
         </li>
       </ul>
     </nav>
